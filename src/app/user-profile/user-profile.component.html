@@ -1,0 +1,9 @@
+<div class="bloc">
+<img [src]="User.photo"/>
+<h4>NOM : {{ User.name }}</h4> 
+<h4>PRENOM : {{User.firstName}}</h4>
+<h4 [hidden]= "User.hidden"> Age: {{User.age}}</h4>
+<p>{{User.quote}}</p>
+<input type="text" [(ngModel)]="User.quote">
+<button (click)="User.hidden = !User.hidden">Afficher Masquer mon age</button>
+</div>
