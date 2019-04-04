@@ -1,5 +1,16 @@
 
 
-<app-sign-up></app-sign-up>
-<app-user-profile></app-user-profile>
-<app-movies></app-movies>
+
+<nav>
+    <ul>
+      <li>
+        <a [routerLink]="['/signup']">sign-up</a>
+      </li>
+      <li>
+        <a [routerLink]="['/user-profile']"> user-profile</a>
+      </li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
+  <app-menu></app-menu>

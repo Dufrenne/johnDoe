@@ -8,6 +8,26 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MoviesComponent } from './movies/movies.component';
 import { HighlightDirective } from './highlight.directive';
+import { MenuComponent } from './menu/menu.component';
+import { Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+
+
+
+const appRoutes: Routes = [
+  {
+    path: 'signup',
+    component: SignUpComponent
+  },
+  {
+    path: 'user-profile',
+    component: UserProfileComponent
+  },
+  {
+    path: '',
+    component: UserProfileComponent
+  }
+ ];
 
 @NgModule({
   declarations: [
@@ -15,14 +35,20 @@ import { HighlightDirective } from './highlight.directive';
     SignUpComponent,
     UserProfileComponent,
     MoviesComponent,
-    HighlightDirective
+    HighlightDirective,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
+ 
 export class AppModule { }
